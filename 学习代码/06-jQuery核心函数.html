@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>06-jQuery核心函数</title>
+    <script src="../js/jquery-1.10.1.js"></script>
+</head>
+<script>
+    //$();表示调用jQuery的函数
+    $(function () {
+        alert("hello inj")
+        //1.接受字符串选择器
+        var $box1 = $(".box1");
+        var $box2 = $("#box2");
+        console.log($box1);
+        console.log($box2);
+
+        //2.接受一个字符串
+        var $p = $("<p>我是你爹</p>")
+        //添加到box1中
+        $box1.append($p)
+        //上面两行代码很像insertHTML
+
+        //3.接收DOM元素
+        var span  = document.getElementsByTagName("span")[0];
+        console.log(span);
+        var $span = $(span) //将原生dom对象转换为jquery对象
+        console.log($span);
+    })
+
+
+
+</script>
+<body>
+<div class="box1"></div>
+<div id="box2"></div>
+<span>我是span</span>
+</body>
+</html>

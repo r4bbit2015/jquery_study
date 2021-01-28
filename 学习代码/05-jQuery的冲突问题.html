@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05-jQuery的冲突问题</title>
+    <script src="../js/jquery-1.10.1.js"></script>
+</head>
+<script>
+    //冲突问题在于$符号
+    //解决方案：1.直接释放$使用权，2.自定义访问符号
+    // jQuery.noConflict(); //释放$的使用权 conflict n. 冲突，矛盾；斗争；争执
+    //或者自定义访问符号
+    var nj = jQuery.noConflict()
+    nj(function () {
+        alert("1")
+    })
+</script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>0x01-jQuery编写登录</title>
+    <script src="js/jquery-1.10.1.js"></script>
+    <script>
+        $(function () {
+            console.log("Jquery")
+            var $username = $("#phone");
+            var $password = $("#password");
+
+            $("#login-button").click(function () {
+                //前端校验
+                if($username.val()=="" || $password.val() =="")
+                {
+                    alert("用户名密码不能为空")
+                }
+                else{
+                    console.log("用户名:"+$username.val());
+                    console.log("密码:"+$password.val());
+                //     // $.ajax({
+                //     //     type:"POST",
+                //     //     url:"#",
+                //     //     //escape是原生js函数，用于对字符串编码
+                //     //     data:"username="+escape($username.val())+"&password="+escape($password.val()),
+                //     //     success:
+                //     })
+                }
+
+            })
+
+        })
+        
+    </script>
+</head>
+
+<body>
+<div id="login-Form">
+    <label for="phone">用户名:</label>
+    <input type="text" id="phone">
+    <label for="password">密码</label>
+    <input type="password" id="password">
+    <button id="login-button">登录</button>
+</div>
+</body>
+</html>

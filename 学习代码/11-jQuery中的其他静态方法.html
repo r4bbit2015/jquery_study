@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>11-jQuery中的其他静态方法.html</title>
+    <script src="../js/jquery-1.10.1.js"></script>
+    <script>
+        //$.trim()去除空格 返回新字符串
+        var str = "                  r4bbit                  ";
+        //
+        console.log(str);
+        str = $.trim(str)
+        console.log(str);
+
+        //$.isWindows(obj); 判断是否为DOM对象 是返回True否则返回False
+        var w = window;
+        var res = $.isWindow(w);
+        console.log(res);
+        //$.isarray(obj); 判断是否为数组 是返回True否则返回False
+        var arr = [1,2,3,4];
+        var res = $.isArray(arr);
+        console.log(res);
+        //$.isfunction(obj);判断是否为函数 是返回True否则返回False
+        var fn = function () {}
+        var res = $.isFunction(fn);
+        console.log(res);
+        //jquery框架提供的使用方法是一个匿名函数
+        console.log($.isFunction(jQuery));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
