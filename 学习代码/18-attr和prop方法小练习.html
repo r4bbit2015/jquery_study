@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>18-attr和prop方法小练习.html</title>
+        <script src="../js/jquery-1.10.1.js"></script>
+            <script>
+                $(function () {
+                    //jquery入口函数
+                    $("button").click(function () {
+                        var file_paths = $("input").val();
+                        console.log(file_paths);
+                        //因为src没有true和false，所以推荐使用attr函数
+                        console.log($("img").attr("src", file_paths));;
+                    })
+                })
+            </script>
+</head>
+<body>
+<input type="text">
+<button>切换图片</button><br>
+<img src="1.jpg" alt="没有此文件">
+</body>
+</html>

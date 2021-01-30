@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>19-jQuery类操作相关方法</title>
+        <script src="../js/jquery-1.10.1.js"></script>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        .class1{
+            width: 100px;
+            height:100px;
+            background: red;
+        }
+        .class2{
+           border: 10px solid #000;
+        }
+
+
+    </style>
+            <script>
+                $(function () {
+                    //jquery入口函数
+                    $(".addClass").click(function () {
+                        $("div").addClass("class1")
+                    })
+                    $(".delClass").click(function () {
+                        $("div").removeClass("class1")
+                    })
+                    $(".toggleClass").click(function () {
+                        //注意：切换的意思就是有该属性就删除，没有该属性就添加 类似于融合了add和remove
+                        $("div").toggleClass("class1")
+                    })
+                })
+            </script>
+</head>
+<body>
+<button class="addClass">添加类</button>
+<button class="delClass">删除类</button>
+<button class="toggleClass">切换类</button>
+
+<div></div>
+</body>
+</html>
